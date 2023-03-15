@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <script>
+
+        class Ninja{
+
+            constructor(nome,estrelas){
+
+                this.nome=nome
+                this.idade
+                this.estrelas=estrelas
+                this.vivo=true
+            
+            }
+
+            AtirarShuriken(orochimaru){
+
+                if(this.estrelas>0){
+                    this.estrelas--;
+                    console.log(`Tens ${this.estrelas} estrelas`);
+                    orochimaru.vivo=false
+                }else{
+                    console.log("acabou")
+                }
+                
+                console.log("VUMMMMMMMMMMM");
+            }
+
+        }
+
+        let naruto= new Ninja("Naruto",10,true)
+        naruto.idade=11
+
+        let orochimaru = new Ninja("Orochimaru",5,true)
+        orochimaru.idade=55
+
+
+        naruto.AtirarShuriken(orochimaru)
+
+
+
+        console.log(naruto)
+        console.log(orochimaru)
+    </script>
+
+    <button onclick="naruto.AtirarShuriken()"></button>
+</body>
+</html>
